@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const siteController = require('../controllers/siteController');
 
-router.get('/', function(req, res, next) {
-  res.send('Hidratante');
-});
+router.get("/",siteController.produtos);
+router.get("/camisetas",siteController.camisetas);
 
 module.exports = router;
